@@ -1,5 +1,6 @@
-🚀 LibraX — Smart Library Management System
-📌 Overview
+# 🚀 LibraX — Smart Library Management System
+
+## 📌 Overview
 
 LibraX — Smart Library Management System is a standalone Core Java desktop application designed to automate and organize common library operations such as book management, member management, book issue and return, searching, due-date tracking, overdue monitoring, fine calculation, transaction management, data persistence, and library analytics.
 
@@ -7,97 +8,108 @@ The system provides two user interfaces: a Command-Line Interface (CLI) for menu
 
 LibraX is developed as a practical application of Core Java and Object-Oriented Programming concepts. The project incorporates classes and objects, encapsulation, inheritance, abstraction, interfaces, polymorphism, method overloading and overriding, enums, collections, exception handling, custom exceptions, Java I/O, object serialization, date and time handling, multithreading, and Java Swing.
 
-The project uses local serialized .dat files for persistence and does not require JDBC, MySQL, or any external database server.
+The project uses local serialized `.dat` files for persistence and does not require JDBC, MySQL, or any external database server.
 
-🎯 Key Features
-📚 Book Management
+---
+
+## 🎯 Key Features
+
+### 📚 Book Management
 
 LibraX provides complete management of the library's book inventory.
 
-Add new books
-Update existing book information
-Remove books
-Search books
-Search by:
-Book ID
-Title
-Author
-Category
-Track book availability
-Track currently issued books
-Maintain book metadata
+- Add new books
+- Update existing book information
+- Remove books
+- Search books
+- Search by Book ID
+- Search by title
+- Search by author
+- Search by category
+- Track book availability
+- Track currently issued books
+- Maintain book metadata
 
 Each book is represented as a Java object and managed through the library service layer.
 
-👥 Member Management
+---
+
+### 👥 Member Management
 
 The member management module maintains information about registered library members.
 
-Register members
-Store member details
-View member information
-Track borrowed books
-Maintain membership status
-Connect members with circulation transactions
+- Register members
+- Store member details
+- View member information
+- Track borrowed books
+- Maintain membership status
+- Connect members with circulation transactions
 
 Member records are represented using Java classes and stored through the application's persistence mechanism.
 
-🔄 Book Circulation
+---
+
+### 🔄 Book Circulation
 
 The circulation module manages the complete issue and return workflow.
 
-Issue an available book
-Associate a book with a member
-Generate issue date
-Generate due date
-Track active loans
-Return books
-Update book availability
-Close completed transactions
-Detect overdue loans
-Calculate applicable fines
+- Issue an available book
+- Associate a book with a member
+- Generate issue date
+- Generate due date
+- Track active loans
+- Return books
+- Update book availability
+- Close completed transactions
+- Detect overdue loans
+- Calculate applicable fines
 
 The system validates circulation operations before modifying the stored data.
 
-🔎 Library Search
+---
+
+### 🔎 Library Search
 
 The search functionality allows users to locate books using different attributes.
 
 Supported search fields include:
 
-Book ID
-Book title
-Author
-Category
+- Book ID
+- Book title
+- Author
+- Category
 
-Search results are generated from the in-memory collection maintained by the Library service.
+Search results are generated from the in-memory collection maintained by the `Library` service.
 
-📊 Reports & Analytics
+---
+
+### 📊 Reports & Analytics
 
 LibraX includes a dedicated reporting module for analysing library activity.
 
 The reporting system provides:
 
-Inventory summary
-Total books
-Total members
-Total librarians
-Currently issued books
-Overdue loans
-Collected fines
-Outstanding overdue fine estimates
-Book availability rate
-Books grouped by category
-Most-borrowed books
-Most-active members
-Detailed overdue-loan information
+- Inventory summary
+- Total books
+- Total members
+- Total librarians
+- Currently issued books
+- Overdue loans
+- Collected fines
+- Outstanding overdue fine estimates
+- Book availability rate
+- Books grouped by category
+- Most-borrowed books
+- Most-active members
+- Detailed overdue-loan information
 
 Reports can also be exported to:
 
+```text
 data/library-report.txt
 🧠 Core Java Concepts Used
 
-LibraX is designed around concepts from the Core Java curriculum.
+LibraX integrates multiple concepts from the Core Java and Object-Oriented Programming curriculum.
 
 🔹 Classes and Objects
 
@@ -119,7 +131,7 @@ Objects of these classes represent books, people, transactions, and application 
 
 Class fields are controlled through access modifiers and methods.
 
-For example, the model classes keep their data within the object and provide appropriate methods for accessing or modifying that data.
+The model classes keep their data within the object and provide appropriate methods for accessing or modifying that data.
 
 This helps maintain controlled access to application state.
 
@@ -163,7 +175,7 @@ It defines the operations expected from the library management service.
 LibraryOperations
         |
         v
-     Library
+      Library
 
 This separates the operation contract from its implementation.
 
@@ -391,7 +403,7 @@ The project includes custom exceptions such as:
 
 BookNotAvailableException
 
-Used when an unavailable/issued book is requested for another issue operation.
+Used when an unavailable or already issued book is requested for another issue operation.
 
 MemberNotFoundException
 
@@ -485,7 +497,7 @@ LibraX follows a layered package-oriented architecture.
                       |
                       v
              +------------------+
-             | File Persistence  |
+             | File Persistence |
              |------------------|
              | books.dat        |
              | members.dat      |
@@ -533,7 +545,7 @@ src/exception/
                   Load Persisted Data
                            |
                            v
-                      Main Menu
+                       Main Menu
                            |
        +-------------------+-------------------+
        |                   |                   |
@@ -549,10 +561,10 @@ src/exception/
                     Reports & Analytics
                            |
                            v
-                     Export Report
+                      Export Report
                            |
                            v
-                      Save Data
+                       Save Data
                            |
                            v
                           EXIT
@@ -654,7 +666,7 @@ Figure: LibraX Command-Line Interface showing library operations and system outp
 
 The Swing interface provides a graphical representation of the library's current information.
 
-Figure: LibraX Java Swing dashboard displaying library statistics and recent activity.
+Figure: LibraX Java Swing Dashboard displaying library statistics and recent activity.
 
 🧪 Testing
 
@@ -896,7 +908,21 @@ LibraX brings these operations together in a single application while demonstrat
 
 The project combines:
 
-Real-world problem solving + Object-Oriented Programming + Core Java + File Handling + Collections + Exception Handling + Multithreading + Desktop GUI
+Real-world problem solving
+        +
+Object-Oriented Programming
+        +
+Core Java
+        +
+File Handling
+        +
+Collections
+        +
+Exception Handling
+        +
+Multithreading
+        +
+Desktop GUI
 
 into one integrated software system.
 
